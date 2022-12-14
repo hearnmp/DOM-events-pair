@@ -35,3 +35,11 @@ smallerButton.addEventListener('click', function () {
         return paragraphSize
     }
 })
+
+// green screen const
+let colors = ["Red", "Blue", "Green", "White", "Gray"]
+const colorButton = document.querySelector("#colorChange")
+
+colorButton.addEventListener('click', function () {
+console.log(document.body.querySelector("#inputText").value)
+})
