@@ -14,21 +14,24 @@ const biggerButton = document.querySelector('#bigger');
 const smallerButton = document.querySelector('#smaller');
 let paragraphText = document.querySelector('#text');
 let paragraphSize = paragraphText.style.fontSize;
-paragraphText.style.fontSize = "20px";
+paragraphText.style.fontSize = "10px";
 
 biggerButton.addEventListener('click', function () {
     // console.log("this works!");
-    paragraphSize++;
     if(paragraphSize < 100){
+        paragraphSize++;
         return document.body.querySelector('#text').style.fontSize = paragraphSize + 'px';
+    }else if(paragraphSize == 100){
+        return paragraphSize
     }
-
 })
 
 smallerButton.addEventListener('click', function () {
     // console.log("this also works!");
-    paragraphSize--;
     if(paragraphSize > 1){
+        paragraphSize--;
         return document.body.querySelector('#text').style.fontSize = paragraphSize + 'px';
+    }else if(paragraphSize == 1){
+        return paragraphSize
     }
 })
